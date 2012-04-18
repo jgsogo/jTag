@@ -328,10 +328,9 @@
 			
 			var obj = $(this);
 			
-			var options = obj.data('options');
-			var count = $(".jTagTag").length+1;
+			var options = obj.data('options');			
 			
-			tag = $('<div class="jTagTag" id="tag'+count+'"style="width:'+width+'px;height:'+height+'px;top:'+top_pos+'px;left:'+left+'px;"><div style="width:100%;height:100%"><div class="jTagDeleteTag"></div><span>'+label+'</span></div></div>')
+			tag = $('<div class="jTagTag" id="tag'+id+'"style="width:'+width+'px;height:'+height+'px;top:'+top_pos+'px;left:'+left+'px;"><div style="width:100%;height:100%"><div class="jTagDeleteTag"></div><span>'+label+'</span></div></div>')
 						.appendTo(obj.prev());
 			
 			if(id){
@@ -347,7 +346,7 @@
 			}
 			
 			if(options.showLabels){
-				$("<label rel='tag"+count+"'>"+label+"</label>").insertBefore($(".jTagLabels div:last"));
+				$("<label rel='tag"+id+"'>"+label+"</label>").insertBefore($(".jTagLabels div:last"));
 			}
 			
 			obj.hideDrag();
