@@ -357,6 +357,7 @@
 		setId: function(id){
 			if($(this).hasClass("jTagTag")){
 				$(this).data("tagid",id);
+				$(this).attr("id","tag"+id);
 			} else {
 				alert('Wrong object');
 			}
